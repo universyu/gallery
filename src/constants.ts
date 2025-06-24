@@ -12,6 +12,7 @@ import TowaImg from "./assets/towa.jpg"
 import MonoImg from "./assets/mono.webp"
 import MaomiImg from "./assets/maomi.jpg"
 import HuiyeImg from "./assets/huiye.jpeg"
+import ChaoImg from "./assets/chao.png"
 
 export const IMG_LIST: ImgItem[] = [
     
@@ -69,5 +70,9 @@ export const IMG_LIST: ImgItem[] = [
     {
         url:HuiyeImg,
         name:'輝夜姬想讓人告白'
+    },
+    {
+        url:ChaoImg,
+        name:"サマータイムレンダ"
     }
 ]

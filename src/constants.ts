@@ -13,6 +13,7 @@ import MonoImg from "./assets/mono.webp"
 import MaomiImg from "./assets/maomi.jpg"
 import HuiyeImg from "./assets/huiye.jpeg"
 import ChaoImg from "./assets/chao.png"
+import YouliImg from "./assets/youli.jpg"
 
 export const IMG_LIST: ImgItem[] = [
     
@@ -74,5 +75,9 @@ export const IMG_LIST: ImgItem[] = [
     {
         url:ChaoImg,
         name:"サマータイムレンダ"
+    },
+    {
+        url:YouliImg,
+        name:"Charlotte"
     }
 ]

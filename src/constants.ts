@@ -1,6 +1,6 @@
 import { ImgItem } from "./Types"
 import YorImg from './assets/yor.jpg'
-import YanamiImg from './assets/Yanami.jpg'
+import XiaobaImg from './assets/Xiaoba.jpeg'
 import AiImg from './assets/ai.jpeg'
 import FuFuImg from './assets/fufu.png'
 import WuImg from "./assets/wu.jpg"
@@ -14,6 +14,7 @@ import MaomiImg from "./assets/maomi.jpg"
 import HuiyeImg from "./assets/huiye.jpeg"
 import ChaoImg from "./assets/chao.png"
 import YouliImg from "./assets/youli.jpg"
+import YasinaImg from "./assets/Yasina.jpg"
 
 export const IMG_LIST: ImgItem[] = [
     
@@ -36,7 +37,7 @@ export const IMG_LIST: ImgItem[] = [
     },
 
     {
-        url: YanamiImg,
+        url: XiaobaImg,
         name: '負けヒロインが多すぎる！'
     },
 
@@ -79,5 +80,9 @@ export const IMG_LIST: ImgItem[] = [
     {
         url:YouliImg,
         name:"Charlotte"
+    },
+    {
+        url:YasinaImg,
+        name:"ソードアート・オンライン"
     }
 ]

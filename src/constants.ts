@@ -16,6 +16,7 @@ import ChaoImg from "./assets/chao.png"
 import YouliImg from "./assets/youli.jpg"
 import YasinaImg from "./assets/Yasina.jpg"
 import TaoxiangImg from "./assets/tao.png"
+import LingnaiImg from "./assets/lingnai.png"
 
 export const IMG_LIST: ImgItem[] = [
     
@@ -89,6 +90,9 @@ export const IMG_LIST: ImgItem[] = [
     {
         url:TaoxiangImg,
         name:"ガールズバンドクライ"
+    },
+    {
+        url:LingnaiImg,
+        name:"わたなれ"
     }
-    
 ]

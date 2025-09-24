@@ -15,8 +15,9 @@ import HuiyeImg from "./assets/huiye.jpeg"
 import ChaoImg from "./assets/chao.png"
 import YouliImg from "./assets/youli.jpg"
 import YasinaImg from "./assets/Yasina.jpg"
-import TaoxiangImg from "./assets/tao.png"
 import LingnaiImg from "./assets/lingnai.png"
+import ChitongImg from "./assets/chitong.png"
+import AngImg from "./assets/ang.png"
 
 export const IMG_LIST: ImgItem[] = [
     
@@ -88,11 +89,15 @@ export const IMG_LIST: ImgItem[] = [
         name:"ソードアート・オンライン"
     },
     {
-        url:TaoxiangImg,
+        url:AngImg,
         name:"ガールズバンドクライ"
     },
     {
         url:LingnaiImg,
         name:"わたなれ"
+    },
+    {
+        url:ChitongImg,
+        name:"アカメが斬る!"
     }
 ]

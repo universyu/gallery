@@ -16,7 +16,7 @@ import ChaoImg from "./assets/chao.png"
 import YouliImg from "./assets/youli.jpg"
 import YasinaImg from "./assets/Yasina.jpg"
 import LingnaiImg from "./assets/lingnai.png"
-import ChitongImg from "./assets/chitong.png"
+import ChitongImg from "./assets/chitong.jpg"
 import AngImg from "./assets/ang.png"
 import JinmuyanImg from "./assets/jinmuyan.jpg"
 

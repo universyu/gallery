@@ -18,6 +18,7 @@ import YasinaImg from "./assets/Yasina.jpg"
 import LingnaiImg from "./assets/lingnai.png"
 import ChitongImg from "./assets/chitong.png"
 import AngImg from "./assets/ang.png"
+import JinmuyanImg from "./assets/jinmuyan.jpg"
 
 export const IMG_LIST: ImgItem[] = [
     
@@ -99,5 +100,9 @@ export const IMG_LIST: ImgItem[] = [
     {
         url:ChitongImg,
         name:"アカメが斬る!"
+    },
+    {
+        url:JinmuyanImg,
+        name:"東京喰種"
     }
 ]

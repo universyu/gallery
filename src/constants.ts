@@ -106,3 +106,4 @@ export const IMG_LIST: ImgItem[] = [
         name:"東京喰種"
     }
 ]
+

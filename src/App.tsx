@@ -1,6 +1,9 @@
 import ThreeDeeBackground from './components/ThreeDeeBackground'
 import { styled } from '@mui/material'
 import { IMG_LIST } from './constants'
+import { useEffect, useRef } from 'react'
+import Bgm from './assets/bgm/playlist.m3u8?url'
+import Hls from 'hls.js'
 
 const ItemWrapper = styled('div')({
   display: 'flex',
@@ -14,7 +17,7 @@ const ItemWrapper = styled('div')({
   width: '100%',
   transition: 'transform 0.3s ease',
   '&:hover': {
-    transform: 'scale(1.03)' 
+    transform: 'scale(1.03)'
   }
 })
 
@@ -27,7 +30,7 @@ const Image = styled('img')({
   borderTopLeftRadius: '12px',
   borderTopRightRadius: '12px',
   objectFit: 'cover',
-  userSelect:'none'
+  userSelect: 'none'
 
 })
 
@@ -40,9 +43,9 @@ const TextWrapper = styled('p')({
   fontSize: '24px',
   padding: '16px',
   fontWeight: '500',
-  userSelect:'none'
+  userSelect: 'none'
 })
-const Gallery = styled('div') ({
+const Gallery = styled('div')({
   padding: '48px 32px',
   display: 'grid',
   boxSizing: 'border-box',
@@ -53,6 +56,39 @@ const Gallery = styled('div') ({
 
 function App() {
 
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const hasPlayed = useRef(false)
+
+  useEffect(() => {
+    const onClick = () => {
+      if (audioRef.current && !hasPlayed.current) {
+        try {
+          const audio = audioRef.current
+          audio.playbackRate = 1.0
+          audio.volume = 0.3
+              hasPlayed.current = true
+          if (audio.canPlayType('application/vnd.apple.mpegurl')) {
+            audio.src = Bgm;
+          } else if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource(Bgm);
+            hls.attachMedia(audio);
+          } else {
+            throw new Error('浏览器不支持')
+          }
+          audio.play()
+        } catch (error){
+          console.error(error)
+        }
+      }
+
+    }
+    window.addEventListener('click', onClick)
+    return () => {
+      window.removeEventListener('click', onClick)
+    }
+  }, [])
+
   return (
     <div
       style={{
@@ -62,6 +98,7 @@ function App() {
         overflow: 'auto'
       }}
     >
+      <audio id="audio" loop preload="metadata" ref={audioRef} />
       <ThreeDeeBackground />
       <Gallery >
         {IMG_LIST.map((item) => {
